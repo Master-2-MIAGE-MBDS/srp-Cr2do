@@ -1,36 +1,37 @@
 import java.util.ArrayList;
+import java.util.List;
 
 class TaskManager {
-    private ArrayList<Task> tasks;
+    private List<Task> tasks;
 
-    private TaskDAO taskManagerDAO;
+    private TaskAddOrUpdate taskAddOrUpdate;
 
-    private TaskList taskManagerList;
+    private TaskList taskList;
 
     public TaskManager() {
         tasks = new ArrayList<>();
-        taskManagerDAO = new TaskDAO(tasks);
-        taskManagerList = new TaskList(tasks);
+        taskAddOrUpdate = new TaskAddOrUpdate(tasks);
+        taskList = new TaskList(tasks);
     }
 
 
     public void addTask(String taskName, String description){
-        this.taskManagerDAO.addTask(taskName, description);
+        this.taskAddOrUpdate.addTask(taskName, description);
     }
 
 
     public void markTaskAsComplete(int i) {
         // Ajouter une nouvelle tâche
-        this.taskManagerDAO.markTaskAsComplete(i);
+        this.taskAddOrUpdate.markTaskAsComplete(i);
     }
 
 
     public void printPendingTasks() {
-        taskManagerList.printPendingTasks();
+        taskList.printPendingTasks();
     }
 
 
     public void printCompletedTasks() {
-        taskManagerList.printCompletedTasks();
+        taskList.printCompletedTasks();
     }
 }

@@ -1,11 +1,11 @@
-import java.util.ArrayList;
+import java.util.List;
 
 public class TaskList {
 
 
-    private ArrayList<Task> tasks;
+    private List<Task> tasks;
 
-    public TaskList(ArrayList<Task> tasks){
+    public TaskList(List<Task> tasks){
         this.tasks = tasks;
     }
 

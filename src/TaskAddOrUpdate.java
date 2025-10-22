@@ -1,10 +1,10 @@
-import java.util.ArrayList;
+import java.util.List;
 
-public class TaskDAO {
+public class TaskAddOrUpdate {
 
-    private ArrayList<Task> tasks;
+    private List<Task> tasks;
 
-    public TaskDAO(ArrayList<Task> tasks) {
+    public TaskAddOrUpdate(List<Task> tasks) {
         this.tasks = tasks;
     }
 
